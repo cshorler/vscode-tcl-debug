@@ -1,7 +1,7 @@
 {
 	"name": "tcl-debug",
 	"displayName": "Tcl Debug",
-	"version": "0.27.0",
+	"version": "0.27.1",
 	"publisher": "flightaware",
 	"description": "Debugging (local, remote) for Tcl",
 	"author": {
@@ -13,8 +13,8 @@
 		"Debuggers"
 	],
 	"engines": {
-		"vscode": "^1.18.0",
-		"node": "^7.9.0"
+		"vscode": "^1.62.0",
+		"node": "^16.14.2"
 	},
 	"icon": "images/mock-debug-icon.png",
 	"categories": [
@@ -34,25 +34,24 @@
 		"tslint": "tslint ./src/**/*.ts",
 		"watch": "tsc -w -p ./src",
 		"test": "mocha -u tdd ./out/tests/",
-		"postinstall": "node ./node_modules/vscode/bin/install",
 		"package": "vsce package",
 		"publish": "vsce publish"
 	},
 	"dependencies": {
-		"await-notify": "1.0.1",
-		"vscode-debugadapter": "1.27.0",
-		"vscode-debugprotocol": "1.27.0",
-		"vscode-nls": "^3.2.4"
+		"await-notify": "^1.0.1",
+		"@vscode/debugadapter": "^1.55.1",
+		"@vscode/debugprotocol": "^1.55.1",
+		"vscode-nls": "^5.0.1"
 	},
 	"devDependencies": {
-		"@types/node": "7.0.55",
-		"@types/mocha": "2.2.48",
-		"typescript": "2.6.2",
-		"mocha": "5.0.1",
-		"vscode": "1.1.17",
-		"vscode-debugadapter-testsupport": "1.27.0",
-		"tslint": "5.9.1",
-		"vsce": "1.37.5"
+		"@types/node": "^16.11.7",
+		"@types/mocha": "^9.0.0",
+		"typescript": "^3.7.7",
+		"mocha": "^9.0.3",
+		"@types/vscode": "^1.62.0",
+		"@vscode/debugadapter-testsupport": "^1.55.1",
+		"@vscode/test-electron": "^2.1.4",
+		"vsce": "^2.9.1"
 	},
 	"main": "./out/extension",
 	"activationEvents": [
