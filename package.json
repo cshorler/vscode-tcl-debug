@@ -30,7 +30,8 @@
 	},
 	"scripts": {
 		"prepublish": "tsc -p ./src",
-		"compile": "tsc -p ./src && cp -r ./src/tcl/* ./out/tcl/",
+		"clean": "rimraf ./out",
+		"compile": "tsc -p ./src && copyfiles -u 1 ./src/tcl/**/* ./out/",
 		"tslint": "tslint ./src/**/*.ts",
 		"watch": "tsc -w -p ./src",
 		"test": "mocha -u tdd ./out/tests/",
@@ -38,19 +39,21 @@
 		"publish": "vsce publish"
 	},
 	"dependencies": {
-		"await-notify": "^1.0.1",
 		"@vscode/debugadapter": "^1.55.1",
 		"@vscode/debugprotocol": "^1.55.1",
+		"await-notify": "^1.0.1",
 		"vscode-nls": "^5.0.1"
 	},
 	"devDependencies": {
-		"@types/node": "^16.11.7",
 		"@types/mocha": "^9.0.0",
-		"typescript": "^3.7.7",
-		"mocha": "^9.0.3",
+		"@types/node": "^16.11.7",
 		"@types/vscode": "^1.62.0",
 		"@vscode/debugadapter-testsupport": "^1.55.1",
 		"@vscode/test-electron": "^2.1.4",
+		"copyfiles": "^2.4.1",
+		"mocha": "^9.0.3",
+		"rimraf": "^3.0.2",
+		"typescript": "^3.7.7",
 		"vsce": "^2.9.1"
 	},
 	"main": "./out/extension",
