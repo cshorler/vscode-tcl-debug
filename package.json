@@ -73,8 +73,7 @@
 				"languages": [
 					"tcl"
 				],
-				"program": "./out/tcl/tclDebug.tcl",
-				"runtime": "tclsh",
+				"program": "./out/tcl/tclDebugAdapter.tcl",
 				"initialConfigurations": [
 					{
 						"type": "tcl",
