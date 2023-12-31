@@ -31,7 +31,7 @@
 	"scripts": {
 		"prepublish": "tsc -p ./src",
 		"clean": "rimraf ./out",
-		"compile": "tsc -p ./src && copyfiles -u 1 ./src/tcl/**/* ./out/",
+		"compile": "tsc -p ./src && rimraf ./out/tcl && copyfiles -u 1 \"./src/tcl/**/*\" ./out/",
 		"tslint": "tslint ./src/**/*.ts",
 		"watch": "tsc -w -p ./src",
 		"test": "mocha -u tdd ./out/tests/",
