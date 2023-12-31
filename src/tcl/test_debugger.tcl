@@ -1,8 +1,8 @@
 #!/usr/bin/env tclsh
 
-set debugVars(interp) "/usr/local/bin/tclsh"
+set debugVars(interp) "/usr/bin/tclsh"
 set debugVars(dir) {}
-set debugVars(script) "/Users/jonathan.cone/dev/mock_debug/test.tcl"
+set debugVars(script) "../../sampleWorkspace/hello.tcl"
 set debugVars(scriptArgs) ""
 set debugVars(projName) "vscode"
 set startCmd "dbg::step"
