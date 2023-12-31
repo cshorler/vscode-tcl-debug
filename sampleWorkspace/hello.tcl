@@ -1,6 +1,7 @@
-#! /bin/env tclsh
+#! /usr/bin/env tclsh
 
 proc hello {} {
+	set i 1
 	puts {hello, world}
 }
 
