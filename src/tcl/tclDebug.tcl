@@ -244,7 +244,7 @@ proc launch_debugger {_args seq} {
 		::debugger::init
 		::debugger::start $startCmd
 	} err] == 1} {
-		transmit_data [error_response $seq launch "$err\ntrace: $errorInfo"]
+		transmit_data [error_response $seq launch "$err\ntrace: $::errorInfo"]
 		return
 	}
 
