@@ -232,7 +232,7 @@ proc launch_debugger {_args seq} {
 		return
 	}
 
-	set debugVars(interp) "/usr/local/bin/tclsh"
+	set debugVars(interp) "/usr/bin/tclsh"
 	set debugVars(dir) {}
 	set debugVars(script) $args(program)
 	set debugVars(scriptArgs) $args(args)
